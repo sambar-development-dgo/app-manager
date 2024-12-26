@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Docker Image Upload</title>
+</head>
+<body>
+
+<h1>Docker Image Upload</h1>
+
+<form action="/endpoint" method="post" enctype="multipart/form-data"> 
+
+  <label for="icao">ICAO Code:</label>
+  <input type="text" id="icao" name="icao" value="British" readonly><br><br>
+
+  <label for="tail">Aircraft Tail Number:</label>
+  <select id="tail" name="tail">
+    <option value="">Select Tail Number</option> 
+    <option value="G-AAAA">G-AAAA</option>
+    <option value="N12345">N12345</option>
+    </select><br><br>
+
+  <label for="partNumber">Part Number:</label>
+  <input type="text" id="partNumber" name="partNumber" placeholder="Enter Part Number (e.g., ABCD123)"><br><br>
+
+  <label for="chartName">Chart Name:</label>
+  <input type="text" id="chartName" name="chartName" placeholder="Enter Chart Name (e.g., MyChart)"><br><br>
+
+  <label for="version">Version Number:</label>
+  <input type="text" id="version" name="version" placeholder="Enter Version (e.g., 1.2.3)"><br><br>
+
+  <label for="category">Category:</label>
+  <select id="category" name="category">
+    <option value="">Select Category</option>
+    <option value="games">Games</option>
+    <option value="video">Video</option>
+    <option value="weather">Weather</option>
+    <option value="shopping">Shopping</option>
+    </select><br><br>
+
+  <h2>Uploader Information</h2>
+
+  <label for="firstName">First Name:</label>
+  <input type="text" id="firstName" name="firstName" placeholder="Enter your first name"><br><br>
+
+  <label for="lastName">Last Name:</label>
+  <input type="text" id="lastName" name="lastName" placeholder="Enter your last name"><br><br>
+
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" placeholder="Enter your email address"><br><br>
+
+  <label for="image">Docker Image:</label>
+  <input type="file" id="image" name="image" accept=".img, .tar, .tar.gz" required><br><br> 
+
+  <input type="submit" value="Upload">
+
+</form>
+
+</body>
+</html>
